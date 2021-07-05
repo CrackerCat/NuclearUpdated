@@ -88,7 +88,7 @@ float WeakSpotAimbotKey = VK_CAPITAL;
 #define RVA(addr, size) ((PBYTE)(addr + *(DWORD*)(addr + ((size) - 4)) + size))
 
 #define _ZeroMemory(x, y) (memset(x, 0, y));
-
+//gg
 #ifdef NODPRINTF
 #define dprintf(x)
 #else
