@@ -4215,7 +4215,6 @@ void Render()
 			{
 				if (GetAsyncKeyState((int)AimbotKey))
 				{
-					auto angle = calc_angle(GCameraCache->Location, closestEnemyAss);
 
 					bAimbotActivated = true;
 					AimToTarget(angle);
