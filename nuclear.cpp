@@ -4198,6 +4198,21 @@ void Render()
 						//EvaluateTarget(loc);
 					}
 				}
+				
+				else if (G::AimbotEnable)
+				{
+					if (G::CollisionDisableOnAimbotKey)
+					{
+						if (bAimbotActivated)
+						{
+							SetActorEnableCollision(actor, false);
+						}
+						else
+						{
+							SetActorEnableCollision(actor, true);
+						}
+					}
+				}
 			}
 		}
 
