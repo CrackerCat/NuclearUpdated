@@ -3217,18 +3217,6 @@ FRotator Clamp(FRotator r)
 	return r;
 }
 
-#define M_RADPI	57.295779513082f
-__forceinline FRotator calc_angle(FVector& Src, FVector& Dst)
-{
-	FVector Delta = Src - Dst;
-	FRotator AimAngles;
-	float Hyp = sqrt(powf(Delta.X, 2.f) + powf(Delta.Y, 2.f));
-	AimAngles.Yaw = atanf(Delta.Y / Delta.X) * M_RADPI;
-	AimAngles.Pitch = (atanf(Delta.Z / Hyp) * M_RADPI) * -1.f;
-	if (Delta.X >= 0.f) AimAngles.Yaw += 180.f;
-	//AimAngles.Roll = 0.f;
-	return AimAngles;
-}
 
 void SetViewAngles(FRotator ang)
 {
